@@ -32,12 +32,6 @@
     </build>
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.hyperic/sigar -->
-        <dependency>
-            <groupId>org.hyperic</groupId>
-            <artifactId>sigar</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -77,6 +71,5 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
         </dependency>
-
     </dependencies>
 </project>

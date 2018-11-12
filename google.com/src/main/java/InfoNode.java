@@ -6,7 +6,9 @@ import system.node.SwapItem;
 import javax.management.MBeanServerConnection;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
+import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.text.DecimalFormat;
 
@@ -43,6 +45,18 @@ public class InfoNode {
 
     public double getCpuUsege() {
         return 100 * osMBean.getSystemCpuLoad();
+    }
+
+    public String getIp() {
+        try (final DatagramSocket socket = new DatagramSocket()) {
+            InetAddress ip = InetAddress.getLocalHost();
+            return ip.getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

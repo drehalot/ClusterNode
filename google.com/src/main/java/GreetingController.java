@@ -1,9 +1,5 @@
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -19,11 +15,11 @@ public class GreetingController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(path = "/")
-    @ResponseBody
-    MainObject home(@RequestParam(required = false, defaultValue = "Dear User") String user) throws ClassNotFoundException, SQLException {
-        return new MainObject(user);
-    }
+//    @RequestMapping(path = "/")
+//    @ResponseBody
+////    MainObject home(@RequestParam(required = false, defaultValue = "Dear User") String user) throws ClassNotFoundException, SQLException {
+////        return new MainObject(user);
+//    }
 
     @RequestMapping(path = "/index")
     @ResponseBody
@@ -37,11 +33,9 @@ public class GreetingController {
         return arrayList;
     }
 
-    @RequestMapping(path = "/getInfo")
+    @RequestMapping(path = "/getstatusofnode")
     @ResponseBody
     InfoNode getInfo() throws IOException {
         return new InfoNode();
     }
-
-
 }
