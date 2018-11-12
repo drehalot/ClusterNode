@@ -2,12 +2,12 @@
 http://localhost:10020/getstatusofnode
 
 Restfull endpoint use for get load of node, return next information:
-- cpuUsege	9.35595379212707
-- architecture	"amd64"
+- cpuUsege
+- architecture	
 - ram	
     used
     ramTotal
-    ramFree	581
+    ramFree	
 - nameOfHost
 - ip	
 - swap	
