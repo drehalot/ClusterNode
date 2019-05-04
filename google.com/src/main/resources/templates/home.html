@@ -1,0 +1,25 @@
+<!DOCTYPE html  >
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+<form th:action="@{/getstatusofnode}" method="get">
+    <input type="submit" value="Status of Node"/>
+</form>
+
+<form th:action="@{/gettableresult}" method="get">
+    <input type="submit" value="Status of task"/>
+</form>
+
+<form th:action="@{/registration}" method="get">
+    <input type="submit" value="Registration"/>
+</form>
+</body>
+</html>

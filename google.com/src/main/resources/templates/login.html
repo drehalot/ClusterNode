@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link type="text/css" href="css/registration.css" rel="stylesheet"/>
+    <script src="js/actions.js"></script>
+    <title>Login Page</title>
+</head>
+<body>
+
+<form th:action="login" method="post">
+
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username" oninput="checkButtonLogin()">
+
+        <label for="name">Password:</label>
+        <input type="password" id="password" name="password" oninput="checkButtonLogin()">
+
+    </fieldset>
+
+    <button type="submit" id="button_login" disabled="true">Login</button>
+    <a href="registration">Registration form</a>
+</form>
+
+</body>
+</html>
