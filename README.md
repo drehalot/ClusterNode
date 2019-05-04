@@ -1,5 +1,5 @@
 # ClusterNode 
-http://localhost:10020/getstatusofnode
+http://localhost:8080/getstatusofnode
 
 Restfull endpoint use for get load of node, return next information:
 - cpuUsege
