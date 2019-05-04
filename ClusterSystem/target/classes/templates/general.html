@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>This is test html</title>
+</head>
+
+<body>
+<p th:text="'Hello, ' + ${name} + '!'" />
+<input id="resultarr" type="text" value="Empty"></input>
+<input id="add" type="submit" value="Add element" onclick="addElement()"></input>
+<input id="timer" type="submit" value="Check Timer" onclick="checkTimer()"></input>
+<img id="icon" alt="New Img" onclick="changeImage()" width="60" height="60">
+<script type="text/javascript">
+			var result=[];
+			var counter=0;
+
+			function addElement(){
+				var tv = prompt("Input Value");
+				result.push(tv);
+				console.log(result);
+				document.getElementById("resultarr").value=result;
+			}
+			window.onload=function() {
+				document.getElementById("icon").src="http://pluspng.com/img-png/png-yes-png-small-medium-large-600.png";
+			}
+			function changeImage(){
+				var tp= counter%2;
+				if (tp==0){
+					document.getElementById("icon").src="http://pluspng.com/img-png/png-yes-png-small-medium-large-600.png";
+				} else{
+					document.getElementById("icon").src="https://classroomclipart.com/images/gallery/Icons/TN_the-word-no-round-icon-clipart.jpg";
+				}
+				counter++;
+			}
+
+			function checkTimer(){
+				var time=parseInt(prompt("Input value"));
+				if (isNaN(time)) {
+					alert("Please input correct value");
+					checkTimer();
+				} else{
+				var tempValue=time;
+							var timerId =setTimeout(function checker(){
+							var msgnew = "Counter is "+tempValue;
+							tempValue =tempValue-1;
+							console.log(tempValue);
+							alert(msgnew);
+							if (tempValue>0) {
+								timerId=setTimeout( checker,2000);
+								}
+							},2000);
+
+				}
+
+			}
+
+
+
+</script>
+</body>
+</html>
